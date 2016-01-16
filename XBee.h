@@ -434,7 +434,7 @@ private:
 /**
  * Represents a Series 2 Explicit RX packet
  *
- * Note: The receive these responses, set AO=1. With the default AO=0,
+ * Note: To receive these responses, set AO=1. With the default AO=0,
  * you will receive ZBRxResponses, not knowing exact details.
  */
 class ZBExplicitRxResponse : public ZBRxResponse {
@@ -882,7 +882,7 @@ public:
 
 	/**
 	 * Register a response received callback. It is called whenever
-	 * a response was succesfully received, before a response
+	 * a response was successfully received, before a response
 	 * specific callback (or onOtherResponse) below is called.
 	 *
 	 * Arguments to the callback will be the received response and
@@ -892,7 +892,7 @@ public:
 
 	/**
 	 * Register an other response received callback. It is called
-	 * whenever a response was succesfully received, but no response
+	 * whenever a response was successfully received, but no response
 	 * specific callback was registered using the functions below
 	 * (after the onResponse callback is called).
 	 *
@@ -903,7 +903,7 @@ public:
 
 	// These functions register a response specific callback. They
 	// are called whenever a response of the appropriate type was
-	// succesfully received (after the onResponse callback is
+	// successfully received (after the onResponse callback is
 	// called).
 	//
 	// Arguments to the callback will be the received response
