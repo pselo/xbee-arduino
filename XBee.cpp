@@ -860,6 +860,11 @@ bool XBee::readPacket(int timeout) {
 		return false;
 	}
 
+	// reset previous response
+	if (_response.isAvailable() || _response.isError()) {
+		// discard previous packet and start over
+		resetResponse();
+	}
 	unsigned long start = millis();
 
     while (int((millis() - start)) < timeout) {
